@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>АкваМед Клиника капельниц</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script type="module">
+      const response = await fetch('assets/images/sprite.svg');
+      const svgData = await response.text();
+      document.body.insertAdjacentHTML('afterbegin', svgData);
+    </script>
+    <header class="header">
+      <div class="container">
+        <div class="header__head">
+          <div class="header__logo">
+            <img
+              src="assets/images/logo.svg"
+              alt="Логотип АкваМед"
+              aria-hidden="true"
+              class="header__logo-img"
+            />
+            <div>
+              <div class="header__logo-title heading">АкваМед</div>
+              <div class="header__logo-subtitle">Клиника капельниц</div>
+            </div>
+          </div>
+          <button
+            class="button button-cta button--primary header__button-mobile"
+          >
+            Капельница на дому
+          </button>
+          <button
+            class="button button-cta button--primary-light header__button-burger header__button-mobile"
+          >
+            <svg width="16" height="10">
+              <use href="#icon_burger"></use>
+            </svg>
+          </button>
+          <div class="header__info">
+            <div class="header__info-item">
+              <svg
+                class="header__info-item-icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <use href="#icon_pin_24"></use>
+              </svg>
+              <div>
+                <div class="header__info-item-label">Адрес</div>
+                <div class="header__info-item-value">
+                  Санкт-Петербург, ул. Авиаконструкторов 45к1
+                </div>
+              </div>
+            </div>
+            <div class="header__info-divider" aria-hidden="true"></div>
+            <div class="header__info-item">
+              <svg
+                class="header__info-item-icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <use href="#icon_phone_24"></use>
+              </svg>
+              <div>
+                <div class="header__info-item-label">Поддержка 24/7</div>
+                <div class="header__info-item-value">+7 (800) 889-99-99</div>
+              </div>
+            </div>
+            <div class="header__info-divider" aria-hidden="true"></div>
+            <div class="header__info-item">
+              <svg
+                class="header__info-item-icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <use href="#icon_refresh_time_24"></use>
+              </svg>
+              <div>
+                <div class="header__info-item-label">Время работы</div>
+                <div class="header__info-item-value">Круглосуточно</div>
+              </div>
+            </div>
+          </div>
+          <div class="header__social">
+            <button class="button button-transparent">
+              <svg width="28" height="28" aria-hidden="true">
+                <use href="#icon_eye_28"></use>
+              </svg>
+            </button>
+            <button class="button button-social">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="#icon_search_24"></use>
+              </svg>
+            </button>
+            <a href="https://t.me/ardmbbk" class="button button-social">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="#icon_vk_24"></use>
+              </svg>
+            </a>
+            <a href="https://t.me/ardmbbk" class="button button-social">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="#icon_tg_24"></use>
+              </svg>
+            </a>
+            <a href="https://t.me/ardmbbk" class="button button-social">
+              <svg width="24" height="24" aria-hidden="true">
+                <use href="#icon_ok_24"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="header__footer">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item header-dropdown">
+                <a
+                  class="button button-nav isActive"
+                  href="https://t.me/ardmbbk"
+                >
+                  <span>Услуги</span>
+                </a>
+                <ul class="header-dropdown-menu header-dropdown-menu--main">
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Медикаментозные капельницы (препараты)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Инфузионная терапия</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Капельницы красоты</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Комплексные инфузионные программы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Диагностика и анализы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Другие услуги</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-list-item header-dropdown">
+                <a class="button button-nav" href="https://t.me/ardmbbk">
+                  <span>О клинике</span>
+                  <svg
+                    class="button-nav__chevron"
+                    width="14"
+                    height="7"
+                    aria-hidden="true"
+                  >
+                    <use href="#icon_chevron_down"></use>
+                  </svg>
+                </a>
+                <ul class="header-dropdown-menu header-dropdown-menu--main">
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Медикаментозные капельницы (препараты)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Инфузионная терапия</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Капельницы красоты</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Комплексные инфузионные программы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Диагностика и анализы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Другие услуги</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="header__nav-list-item header-dropdown">
+                <a class="button button-nav" href="https://t.me/ardmbbk">
+                  <span>Цены</span>
+                </a>
+              </li>
+              <li class="header__nav-list-item header-dropdown">
+                <a class="button button-nav" href="https://t.me/ardmbbk">
+                  <span>Врачи</span>
+                </a>
+              </li>
+              <li class="header__nav-list-item header-dropdown">
+                <a class="button button-nav" href="https://t.me/ardmbbk">
+                  <span>Контакты</span>
+                </a>
+              </li>
+              <li class="header__nav-list-item header-dropdown">
+                <a class="button button-nav" href="https://t.me/ardmbbk">
+                  <span>Статьи</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__cta">
+            <button class="button button-cta button--primary-light">
+              Записаться
+            </button>
+            <button class="button button-cta button--primary">
+              Капельница на дому
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header__mobile isHide">
+        <div class="header__mobile-input-wrapper">
+          <input
+            class="header__mobile-input"
+            type="text"
+            placeholder="Поиск по сайту"
+          />
+          <button class="button header__mobile-input-button">
+            <svg width="20" height="20">
+              <use href="#icon_search_24"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="button button--primary header__mobile-button">
+          Бесплатная консультация
+        </button>
+        <div class="header__mobile-nav">
+          <a class="header__mobile-nav-link" href="">Услуги</a>
+          <a class="header__mobile-nav-link" href="">О клинике</a>
+          <a class="header__mobile-nav-link" href="">Цены</a>
+          <a class="header__mobile-nav-link" href="">Врачи</a>
+          <a class="header__mobile-nav-link" href="">Контакты</a>
+          <a class="header__mobile-nav-link" href="">Статьи</a>
+        </div>
+        <div class="header__mobile-info">
+          <div class="header__mobile-info-item">
+            <svg
+              class="header__mobile-info-item-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_pin_24"></use>
+            </svg>
+            <div>
+              <div class="header__mobile-info-item-label">Адрес</div>
+              <div class="header__mobile-info-item-value">
+                Санкт-Петербург, ул. Авиаконструкторов 45к1
+              </div>
+            </div>
+          </div>
+          <div class="header__mobile-info-item">
+            <svg
+              class="header__mobile-info-item-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_phone_24"></use>
+            </svg>
+            <div>
+              <div class="header__mobile-info-item-label">Поддержка 24/7</div>
+              <div class="header__mobile-info-item-value">
+                +7 (800) 889-99-99
+              </div>
+            </div>
+          </div>
+          <div class="header__mobile-info-item">
+            <svg
+              class="header__mobile-info-item-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_mail_24"></use>
+            </svg>
+            <div>
+              <div class="header__mobile-info-item-label">
+                Электронная почта
+              </div>
+              <div class="header__mobile-info-item-value">
+                info@kapelnica-med.ru
+              </div>
+            </div>
+          </div>
+          <div class="header__mobile-info-item">
+            <svg
+              class="header__mobile-info-item-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_refresh_time_24"></use>
+            </svg>
+            <div>
+              <div class="header__mobile-info-item-label">Время работы</div>
+              <div class="header__mobile-info-item-value">Круглосуточно</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <h1 class="hero__title heading">
+              Клиника капельниц АкваМед
+              <span class="hero__title-accent">в Санкт-Петербурге</span>
+            </h1>
+            <p class="hero__subtitle">
+              Инфузионные программы под контролем врачей: детокс, энергия,
+              красота и поддержка иммунитета
+            </p>
+            <div class="hero__location">
+              <div class="hero__location-indicator">
+                <span>В клинике</span>
+              </div>
+              <div class="hero__location-indicator">
+                <span>На дому</span>
+              </div>
+            </div>
+            <div class="hero__card-list">
+              <div class="hero__card">
+                <div class="hero__card-head">
+                  <div>
+                    <div class="hero__card-label">Капельница</div>
+                    <div class="hero__card-name">Детокс</div>
+                  </div>
+                  <svg width="30" height="40">
+                    <use href="#illustration_drop_green"></use>
+                  </svg>
+                </div>
+                <ul class="hero__card-feature">
+                  <li class="hero__card-feature-item">
+                    очищение организма после алкоголя и нагрузок
+                  </li>
+                </ul>
+                <div class="hero__card-price">
+                  Цена: <span class="hero__card-price-accent">от 5 000 ₽</span>
+                </div>
+                <button class="button button--primary-light hero__card-button">
+                  Подробнее
+                </button>
+              </div>
+              <div class="hero__card">
+                <div class="hero__card-head">
+                  <div>
+                    <div class="hero__card-label">Капельница</div>
+                    <div class="hero__card-name">Энергия</div>
+                  </div>
+                  <svg width="30" height="40">
+                    <use href="#illustration_drop_teal"></use>
+                  </svg>
+                </div>
+                <ul class="hero__card-feature">
+                  <li class="hero__card-feature-item">
+                    быстрое восстановление сил&nbsp;и&nbsp;тонуса
+                  </li>
+                </ul>
+                <div class="hero__card-price">
+                  Цена: <span class="hero__card-price-accent">от 5 500 ₽</span>
+                </div>
+                <button class="button button--primary-light hero__card-button">
+                  Подробнее
+                </button>
+              </div>
+              <div class="hero__card">
+                <div class="hero__card-head">
+                  <div>
+                    <div class="hero__card-label">Капельница</div>
+                    <div class="hero__card-name">Золушка</div>
+                  </div>
+                  <svg width="30" height="40">
+                    <use href="#illustration_drop_blue"></use>
+                  </svg>
+                </div>
+                <ul class="hero__card-feature">
+                  <li class="hero__card-feature-item">
+                    сияние кожи, свежий вид
+                  </li>
+                </ul>
+                <div class="hero__card-price">
+                  Цена: <span class="hero__card-price-accent">от 5 900 ₽</span>
+                </div>
+                <button class="button button--primary-light hero__card-button">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="hero__cta">
+              <button class="button button--primary hero__cta-button">
+                Подобрать капельницу
+              </button>
+              <button class="button button--primary-light hero__cta-button">
+                Бесплатная консультация
+              </button>
+            </div>
+          </div>
+          <picture>
+            <source srcset="assets/images/hero_photo.avif" type="image/avif" />
+            <source srcset="assets/images/hero_photo.webp" type="image/webp" />
+            <img
+              class="hero__photo"
+              src="assets/images/hero_photo.png"
+              alt="Фотография врача"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="therapy">
+      <div class="container">
+        <h2 class="therapy__title heading">Что даёт инфузионная терапия?</h2>
+        <div class="therapy__wrapper">
+          <div class="therapy__grid">
+            <div class="therapy__card">
+              <svg width="21" height="26">
+                <use href="#therapy_lightning"></use>
+              </svg>
+              <div class="therapy__card-text">
+                Эффект уже после первой процедуры
+              </div>
+            </div>
+            <div class="therapy__card">
+              <svg width="26" height="26">
+                <use href="#therapy_timer"></use>
+              </svg>
+              <div class="therapy__card-text">
+                5 капельниц = 3 месяца приема витаминов
+              </div>
+            </div>
+            <div class="therapy__card">
+              <svg width="21" height="26">
+                <use href="#therapy_drop"></use>
+              </svg>
+              <div class="therapy__card-text">
+                100% усвоение — витамины и препараты минуют ЖКТ
+              </div>
+            </div>
+            <div class="therapy__card">
+              <svg width="24" height="27">
+                <use href="#therapy_yoga"></use>
+              </svg>
+              <div class="therapy__card-text">
+                Без нагрузки на желудок и печень
+              </div>
+            </div>
+          </div>
+          <picture>
+            <source srcset="assets/images/therapy_img.avif" type="image/avif" />
+            <source srcset="assets/images/therapy_img.webp" type="image/webp" />
+            <img
+              class="therapy__img"
+              src="assets/images/therapy_img.png"
+              alt="Иллюстрация капельницы"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <div class="cta__grid">
+          <div class="cta__content">
+            <h2 class="cta__title heading">
+              Не знаете какая капельница или процедура вам подойдет?
+            </h2>
+            <p class="cta__subtitle">
+              Оставьте заявку, наш специалист перезвонит вам и бесплатно
+              проконсультирует вас
+            </p>
+            <form class="cta__form">
+              <input
+                class="cta__input"
+                name="name"
+                placeholder="Ваше имя"
+                type="text"
+              />
+              <input
+                class="cta__input"
+                name="phone"
+                placeholder="Ваш номер телефона"
+                type="tel"
+              />
+              <button class="button button--secondary cta__button">
+                Отправить заявку
+              </button>
+              <div class="cta__checkbox-wrapper">
+                <label class="cta__checkbox">
+                  <input class="cta__checkbox-input" type="checkbox" checked />
+                  <span class="cta__checkbox-text"
+                    >Нажимая кнопку я соглашаюсь с
+                    <a href="">политикой конфединциальности</a> и
+                    <a href="">пользовательским соглашением</a></span
+                  >
+                </label>
+              </div>
+            </form>
+          </div>
+          <picture>
+            <source srcset="assets/images/cta_photo.avif" type="image/avif" />
+            <source srcset="assets/images/cta_photo.webp" type="image/webp" />
+            <img
+              class="cta__photo"
+              src="assets/images/cta_photo.png"
+              alt="Фотография врача"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="text-block">
+      <div class="container">
+        <div class="block">
+          <h2>Текстовый блок</h2>
+          <div class="grid">
+            <div class="content">
+              <p>
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы. Господа, высококачественный
+                прототип будущего проекта играет определяющее значение для
+                вывода текущих активов. Наше дело не так однозначно, как может
+                показаться: постоянное информационно-пропагандистское
+                обеспечение нашей деятельности способствует повышению качества
+                экспериментов, поражающих по своей масштабности и грандиозности.
+                Кстати, реплицированные с зарубежных источников, современные
+                исследования формируют глобальную экономическую сеть и при этом
+                — объявлены нарушающими общечеловеческие нормы этики и морали.
+              </p>
+              <p>
+                В целом, конечно, синтетическое тестирование предопределяет
+                высокую востребованность экономической целесообразности
+                принимаемых решений. Наше дело не так однозначно, как может
+                показаться: убеждённость некоторых оппонентов говорит о
+                возможностях модели развития. Однозначно, предприниматели в сети
+                интернет своевременно верифицированы.
+              </p>
+              <p>Наше дело не так однозначно, как может показаться:</p>
+              <ul>
+                <li>
+                  информационно-пропагандистское обеспечение нашей деятельности
+                </li>
+                <li>предприниматели в сети интернет</li>
+                <li>
+                  реплицированные с зарубежных источников, современные
+                  исследования
+                </li>
+                <li>
+                  убеждённость некоторых оппонентов говорит о возможностях
+                  модели развития
+                </li>
+                <li>определяющее значение для вывода текущих активов</li>
+              </ul>
+              <div class="callout">
+                Ясность нашей позиции очевидна: курс на
+                социально-ориентированный национальный проект однозначно
+                фиксирует необходимость дальнейших направлений развития. В своём
+                стремлении повысить качество жизни, они забывают, что
+                социально-экономическое развитие в значительной степени
+                обусловливает важность экономической целесообразности
+                принимаемых решений.
+              </div>
+              <p>
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы. Господа, высококачественный
+                прототип будущего проекта играет определяющее значение для
+                вывода текущих активов. Наше дело не так однозначно, как может
+                показаться: постоянное информационно-пропагандистское
+                обеспечение нашей деятельности способствует повышению качества
+                экспериментов, поражающих по своей масштабности и грандиозности.
+              </p>
+              <p>
+                Разнообразный и богатый опыт говорит нам, что курс на
+                социально-ориентированный национальный проект:
+              </p>
+              <ol>
+                <li>
+                  Информационно-пропагандистское обеспечение нашей деятельности
+                </li>
+                <li>Предприниматели в сети интернет</li>
+                <li>
+                  Реплицированные с зарубежных источников, современные
+                  исследования
+                </li>
+                <li>
+                  Убеждённость некоторых оппонентов говорит о возможностях
+                  модели развития
+                </li>
+                <li>
+                  Определяющее значение для вывода текущих активов некоторых
+                  оппонентов говорит о возможностях модели развития
+                </li>
+              </ol>
+            </div>
+            <picture>
+              <source
+                srcset="assets/images/text_block_img_1.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="assets/images/text_block_img_1.webp"
+                type="image/webp"
+              />
+              <img
+                class="img"
+                src="assets/images/text_block_img_1.png"
+                alt="Иллюстрация"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="block">
+          <h3>Текстовый блок H3</h3>
+          <div class="grid">
+            <div class="content">
+              <p>
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы. Господа, высококачественный
+                прототип будущего проекта играет определяющее значение для
+                вывода текущих активов. Наше дело не так однозначно, как может
+                показаться: постоянное информационно-пропагандистское
+                обеспечение нашей деятельности способствует повышению качества
+                экспериментов, поражающих по своей масштабности и грандиозности.
+                Кстати, реплицированные с зарубежных источников, современные
+                исследования формируют глобальную экономическую сеть и при этом
+                — объявлены нарушающими общечеловеческие нормы этики и морали.
+              </p>
+              <p>
+                В целом, конечно, синтетическое тестирование предопределяет
+                высокую востребованность экономической целесообразности
+                принимаемых решений. Наше дело не так однозначно, как может
+                показаться: убеждённость некоторых оппонентов говорит о
+                возможностях модели развития. Однозначно, предприниматели в сети
+                интернет своевременно верифицированы.
+              </p>
+              <blockquote>
+                <p>
+                  Ясность нашей позиции очевидна: курс на
+                  социально-ориентированный национальный проект однозначно
+                  фиксирует необходимость дальнейших направлений развития. В
+                  своём стремлении повысить качество жизни, они забывают, что
+                  социально-экономическое развитие в значительной степени
+                  обусловливает важность экономической целесообразности
+                  принимаемых решений.
+                </p>
+                <div class="divider"></div>
+                <div class="doctor">
+                  <img
+                    class="doctor__avatar"
+                    src="assets/images/text_block_avatar.png"
+                    alt="Аватар доктора"
+                  />
+                  <div class="doctor__info">
+                    <div class="doctor__name">
+                      Константинопольский Константин Константинович
+                    </div>
+                    <div class="doctor__position">
+                      Главный врач клиники, психиатр-нарколог
+                    </div>
+                    <div class="doctor__experience">Опыт работы: 13 лет</div>
+                  </div>
+                </div>
+              </blockquote>
+              <p>
+                В целом, конечно, синтетическое тестирование предопределяет
+                высокую востребованность экономической целесообразности
+                принимаемых решений. Наше дело не так однозначно, как может
+                показаться: убеждённость некоторых оппонентов говорит о
+                возможностях модели развития. Однозначно, предприниматели в сети
+                интернет своевременно верифицированы.
+              </p>
+            </div>
+            <picture>
+              <source
+                srcset="assets/images/text_block_img_2.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="assets/images/text_block_img_2.webp"
+                type="image/webp"
+              />
+              <img
+                class="img"
+                src="assets/images/text_block_img_2.png"
+                alt="Иллюстрация"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="license">
+      <div class="container">
+        <div class="license__grid">
+          <div class="license__content">
+            <h2 class="license__title heading">Лицензии клиники АкваМед</h2>
+            <div class="license__description">
+              <p>
+                Клиника работает на основании медицинской лицензии и всех
+                необходимых разрешений. Работаем с пациентами на основе
+                заключения договора о предоставлении медицинских услуг -
+                прозрачно, безопасно и с защитой вашего здоровья.
+              </p>
+              <p>
+                Мы используем только сертифицированные препараты и соблюдаем
+                стандарты Министерства здравоохранения РФ. Медицинская лицензия
+                ООО «Кристалл» Л041-01148-78/00347913
+              </p>
+            </div>
+            <div class="license__controls">
+              <button class="license__button">
+                <svg width="16" height="16">
+                  <use href="#icon_arrow_left_16"></use>
+                </svg>
+              </button>
+              <button class="license__button">
+                <svg width="16" height="16">
+                  <use href="#icon_arrow_right_16"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="license__row">
+            <div class="license__item">
+              <img
+                class="img"
+                src="assets/images/license_img.webp"
+                alt="Иллюстрация"
+              />
+              <div class="license__item-text">
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы
+              </div>
+            </div>
+            <div class="license__item">
+              <img
+                class="img"
+                src="assets/images/license_img.webp"
+                alt="Иллюстрация"
+              />
+              <div class="license__item-text">
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы
+              </div>
+            </div>
+            <div class="license__item">
+              <img
+                class="img"
+                src="assets/images/license_img.webp"
+                alt="Иллюстрация"
+              />
+              <div class="license__item-text">
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <h2 class="faq__title heading">Отвечаем на ваши вопросы</h2>
+        <div class="faq__content">
+          <details class="faq__item">
+            <summary class="faq__item-summary">
+              Существуют ли в клинике пакетные предложения или скидки?
+            </summary>
+            <div class="faq__item-body">
+              Клиника работает на основании медицинской лицензии и всех
+              необходимых разрешений. Работаем с пациентами на основе заключения
+              договора о предоставлении медицинских услуг - прозрачно, безопасно
+              и с защитой вашего здоровья.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-summary">
+              Клиника работает на основании медицинской лицензии и всех
+              необходимых разрешений?
+            </summary>
+            <div class="faq__item-body">
+              Клиника работает на основании медицинской лицензии и всех
+              необходимых разрешений. Работаем с пациентами на основе заключения
+              договора о предоставлении медицинских услуг - прозрачно, безопасно
+              и с защитой вашего здоровья.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-summary">
+              Существуют ли в клинике пакетные предложения или скидки?
+            </summary>
+            <div class="faq__item-body">
+              Клиника работает на основании медицинской лицензии и всех
+              необходимых разрешений. Работаем с пациентами на основе заключения
+              договора о предоставлении медицинских услуг - прозрачно, безопасно
+              и с защитой вашего здоровья.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-summary">
+              Клиника работает на основании медицинской лицензии?
+            </summary>
+            <div class="faq__item-body">
+              Клиника работает на основании медицинской лицензии и всех
+              необходимых разрешений. Работаем с пациентами на основе заключения
+              договора о предоставлении медицинских услуг - прозрачно, безопасно
+              и с защитой вашего здоровья.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item-summary">
+              Существуют ли в клинике пакетные предложения или скидки?
+            </summary>
+            <div class="faq__item-body">
+              Клиника работает на основании медицинской лицензии и всех
+              необходимых разрешений. Работаем с пациентами на основе заключения
+              договора о предоставлении медицинских услуг - прозрачно, безопасно
+              и с защитой вашего здоровья.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <script>
+      document
+        .querySelector('.header__button-burger')
+        .addEventListener('click', () => {
+          document.querySelector('.header__mobile').classList.toggle('isHide');
+        });
+    </script>
+  </body>
+</html>
