@@ -2,20 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>АкваМед Клиника капельниц</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
+    <title>АкваМед Клиника капельниц</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
     <script type="module">
-      const response = await fetch('assets/images/sprite.svg');
+      const response = await fetch("assets/images/sprite.svg");
       const svgData = await response.text();
-      document.body.insertAdjacentHTML('afterbegin', svgData);
+      document.body.insertAdjacentHTML("afterbegin", svgData);
     </script>
     <header class="header">
       <div class="container">
@@ -33,15 +31,16 @@
             </div>
           </div>
           <button
-            class="button button-cta button--primary header__button-mobile"
+            class="button button--lg button--primary header__button-mobile"
           >
             Капельница на дому
           </button>
           <button
-            class="button button-cta button--primary-light header__button-burger header__button-mobile"
+            class="button button--square button--primary-light header__button-mobile"
+            id="header-button-hamburger"
           >
-            <svg width="16" height="10">
-              <use href="#icon_burger"></use>
+            <svg class="button__icon" width="24" height="24">
+              <use href="#icon_menu_24"></use>
             </svg>
           </button>
           <div class="header__info">
@@ -93,28 +92,62 @@
             </div>
           </div>
           <div class="header__social">
-            <button class="button button-transparent">
-              <svg width="28" height="28" aria-hidden="true">
-                <use href="#icon_eye_28"></use>
+            <button class="button button--square button--transparent">
+              <svg
+                class="button__icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <use href="#icon_eye_24"></use>
               </svg>
             </button>
-            <button class="button button-social">
-              <svg width="24" height="24" aria-hidden="true">
+            <button class="button button--square button--primary-light">
+              <svg
+                class="button__icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
                 <use href="#icon_search_24"></use>
               </svg>
             </button>
-            <a href="https://t.me/ardmbbk" class="button button-social">
-              <svg width="24" height="24" aria-hidden="true">
+            <a
+              href="https://t.me/ardmbbk"
+              class="button button--square button--primary-light"
+            >
+              <svg
+                class="button__icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
                 <use href="#icon_vk_24"></use>
               </svg>
             </a>
-            <a href="https://t.me/ardmbbk" class="button button-social">
-              <svg width="24" height="24" aria-hidden="true">
+            <a
+              href="https://t.me/ardmbbk"
+              class="button button--square button--primary-light"
+            >
+              <svg
+                class="button__icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
                 <use href="#icon_tg_24"></use>
               </svg>
             </a>
-            <a href="https://t.me/ardmbbk" class="button button-social">
-              <svg width="24" height="24" aria-hidden="true">
+            <a
+              href="https://t.me/ardmbbk"
+              class="button button--square button--primary-light"
+            >
+              <svg
+                class="button__icon"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
                 <use href="#icon_ok_24"></use>
               </svg>
             </a>
@@ -123,109 +156,107 @@
         <div class="header__footer">
           <nav class="header__nav">
             <ul class="header__nav-list">
-              <li class="header__nav-list-item header-dropdown">
+              <li class="header__dropdown">
                 <a
-                  class="button button-nav isActive"
+                  class="button button--lg button--nav isActive"
                   href="https://t.me/ardmbbk"
                 >
                   <span>Услуги</span>
                 </a>
-                <ul class="header-dropdown-menu header-dropdown-menu--main">
+                <ul class="header__dropdown-menu header__dropdown-menu--main">
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Медикаментозные капельницы (препараты)</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Инфузионная терапия</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Капельницы красоты</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Комплексные инфузионные программы</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Диагностика и анализы</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Другие услуги</a
                     >
                   </li>
                 </ul>
               </li>
-              <li class="header__nav-list-item header-dropdown">
-                <a class="button button-nav" href="https://t.me/ardmbbk">
+              <li class="header__dropdown">
+                <a
+                  class="button button--lg button--nav"
+                  href="https://t.me/ardmbbk"
+                >
                   <span>О клинике</span>
-                  <svg
-                    class="button-nav__chevron"
-                    width="14"
-                    height="7"
-                    aria-hidden="true"
-                  >
-                    <use href="#icon_chevron_down"></use>
+                  <svg class="header__dropdown-chevron" width="20" height="20" aria-hidden="true">
+                    <use href="#icon_chevron_down_20"></use>
                   </svg>
                 </a>
-                <ul class="header-dropdown-menu header-dropdown-menu--main">
+                <ul class="header__dropdown-menu header__dropdown-menu--main">
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Медикаментозные капельницы (препараты)</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Инфузионная терапия</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Капельницы красоты</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Комплексные инфузионные программы</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Диагностика и анализы</a
                     >
                   </li>
                   <li>
                     <a
-                      class="header-dropdown-menu-item"
+                      class="header__dropdown-menu-item"
                       href="https://t.me/ardmbbk"
                       >Другие услуги</a
                     >
@@ -233,67 +264,155 @@
                 </ul>
               </li>
 
-              <li class="header__nav-list-item header-dropdown">
-                <a class="button button-nav" href="https://t.me/ardmbbk">
+              <li class="header__dropdown">
+                <a
+                  class="button button--lg button--nav"
+                  href="https://t.me/ardmbbk"
+                >
                   <span>Цены</span>
                 </a>
               </li>
-              <li class="header__nav-list-item header-dropdown">
-                <a class="button button-nav" href="https://t.me/ardmbbk">
+              <li class="header__dropdown">
+                <a
+                  class="button button--lg button--nav"
+                  href="https://t.me/ardmbbk"
+                >
                   <span>Врачи</span>
                 </a>
               </li>
-              <li class="header__nav-list-item header-dropdown">
-                <a class="button button-nav" href="https://t.me/ardmbbk">
+              <li class="header__dropdown">
+                <a
+                  class="button button--lg button--nav"
+                  href="https://t.me/ardmbbk"
+                >
                   <span>Контакты</span>
                 </a>
               </li>
-              <li class="header__nav-list-item header-dropdown">
-                <a class="button button-nav" href="https://t.me/ardmbbk">
+              <li class="header__dropdown">
+                <a
+                  class="button button--lg button--nav"
+                  href="https://t.me/ardmbbk"
+                >
                   <span>Статьи</span>
                 </a>
               </li>
             </ul>
           </nav>
-
           <div class="header__cta">
-            <button class="button button-cta button--primary-light">
+            <button class="button button--lg button--primary-light">
               Записаться
             </button>
-            <button class="button button-cta button--primary">
+            <button class="button button--lg button--primary">
               Капельница на дому
             </button>
           </div>
         </div>
       </div>
-      <div class="header__mobile isHide">
-        <div class="header__mobile-input-wrapper">
+      <div class="header-mobile-menu isHide">
+        <div class="header-mobile-menu__input-container">
           <input
-            class="header__mobile-input"
+            class="header-mobile-menu__input"
             type="text"
             placeholder="Поиск по сайту"
           />
-          <button class="button header__mobile-input-button">
+          <button class="button header-mobile-menu__input-button">
             <svg width="20" height="20">
               <use href="#icon_search_24"></use>
             </svg>
           </button>
         </div>
-        <button class="button button--primary header__mobile-button">
+        <button
+          class="button button--lg button--primary header-mobile-menu__button"
+        >
           Бесплатная консультация
         </button>
-        <div class="header__mobile-nav">
-          <a class="header__mobile-nav-link" href="">Услуги</a>
-          <a class="header__mobile-nav-link" href="">О клинике</a>
-          <a class="header__mobile-nav-link" href="">Цены</a>
-          <a class="header__mobile-nav-link" href="">Врачи</a>
-          <a class="header__mobile-nav-link" href="">Контакты</a>
-          <a class="header__mobile-nav-link" href="">Статьи</a>
+        <div class="header-mobile-menu__nav">
+          <div class="header-mobile-menu__nav-dropdown">
+            <div
+              class="button button--nav header-mobile-menu__nav-link"
+            >
+              <a class="header-mobile-menu__nav-link-text">Услуги</a>
+              <button class="button button--transparent">
+                <svg width="20" height="20">
+                  <use href="#icon_chevron_down_20"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="header-mobile-menu__nav-dropdown-menu">
+              <li>
+                <a
+                  class="header-mobile-menu__nav-dropdown-menu-item"
+                  href="https://t.me/ardmbbk"
+                >Медикаментозные капельницы (препараты)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header-mobile-menu__nav-dropdown-menu-item"
+                  href="https://t.me/ardmbbk"
+                >Инфузионная терапия</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header-mobile-menu__nav-dropdown-menu-item"
+                  href="https://t.me/ardmbbk"
+                >Капельницы красоты</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header-mobile-menu__nav-dropdown-menu-item"
+                  href="https://t.me/ardmbbk"
+                >Комплексные инфузионные программы</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header-mobile-menu__nav-dropdown-menu-item"
+                  href="https://t.me/ardmbbk"
+                >Диагностика и анализы</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header-mobile-menu__nav-dropdown-menu-item"
+                  href="https://t.me/ardmbbk"
+                >Другие услуги</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a
+            class="button button--nav header-mobile-menu__nav-link"
+            href=""
+            >О клинике</a
+          >
+          <a
+            class="button button--nav header-mobile-menu__nav-link"
+            href=""
+            >Цены</a
+          >
+          <a
+            class="button button--nav header-mobile-menu__nav-link"
+            href=""
+            >Врачи</a
+          >
+          <a
+            class="button button--nav header-mobile-menu__nav-link"
+            href=""
+            >Контакты</a
+          >
+          <a
+            class="button button--nav header-mobile-menu__nav-link"
+            href=""
+            >Статьи</a
+          >
         </div>
-        <div class="header__mobile-info">
-          <div class="header__mobile-info-item">
+        <div class="header-mobile-menu__info">
+          <div class="header-mobile-menu__info-item">
             <svg
-              class="header__mobile-info-item-icon"
+              class="header-mobile-menu__info-item-icon"
               width="24"
               height="24"
               aria-hidden="true"
@@ -301,15 +420,15 @@
               <use href="#icon_pin_24"></use>
             </svg>
             <div>
-              <div class="header__mobile-info-item-label">Адрес</div>
-              <div class="header__mobile-info-item-value">
+              <div class="header-mobile-menu__info-item-label">Адрес</div>
+              <div class="header-mobile-menu__info-item-value">
                 Санкт-Петербург, ул. Авиаконструкторов 45к1
               </div>
             </div>
           </div>
-          <div class="header__mobile-info-item">
+          <div class="header-mobile-menu__info-item">
             <svg
-              class="header__mobile-info-item-icon"
+              class="header-mobile-menu__info-item-icon"
               width="24"
               height="24"
               aria-hidden="true"
@@ -317,15 +436,17 @@
               <use href="#icon_phone_24"></use>
             </svg>
             <div>
-              <div class="header__mobile-info-item-label">Поддержка 24/7</div>
-              <div class="header__mobile-info-item-value">
+              <div class="header-mobile-menu__info-item-label">
+                Поддержка 24/7
+              </div>
+              <div class="header-mobile-menu__info-item-value">
                 +7 (800) 889-99-99
               </div>
             </div>
           </div>
-          <div class="header__mobile-info-item">
+          <div class="header-mobile-menu__info-item">
             <svg
-              class="header__mobile-info-item-icon"
+              class="header-mobile-menu__info-item-icon"
               width="24"
               height="24"
               aria-hidden="true"
@@ -333,17 +454,17 @@
               <use href="#icon_mail_24"></use>
             </svg>
             <div>
-              <div class="header__mobile-info-item-label">
+              <div class="header-mobile-menu__info-item-label">
                 Электронная почта
               </div>
-              <div class="header__mobile-info-item-value">
+              <div class="header-mobile-menu__info-item-value">
                 info@kapelnica-med.ru
               </div>
             </div>
           </div>
-          <div class="header__mobile-info-item">
+          <div class="header-mobile-menu__info-item">
             <svg
-              class="header__mobile-info-item-icon"
+              class="header-mobile-menu__info-item-icon"
               width="24"
               height="24"
               aria-hidden="true"
@@ -351,10 +472,65 @@
               <use href="#icon_refresh_time_24"></use>
             </svg>
             <div>
-              <div class="header__mobile-info-item-label">Время работы</div>
-              <div class="header__mobile-info-item-value">Круглосуточно</div>
+              <div class="header-mobile-menu__info-item-label">
+                Время работы
+              </div>
+              <div class="header-mobile-menu__info-item-value">
+                Круглосуточно
+              </div>
             </div>
           </div>
+        </div>
+        <div class="header-mobile-menu__social">
+          <a
+            href="https://t.me/ardmbbk"
+            class="button button--square button--primary-light"
+          >
+            <svg
+              class="button__icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_vk_24"></use>
+            </svg>
+          </a>
+          <a
+            href="https://t.me/ardmbbk"
+            class="button button--square button--primary-light"
+          >
+            <svg
+              class="button__icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_tg_24"></use>
+            </svg>
+          </a>
+          <a
+            href="https://t.me/ardmbbk"
+            class="button button--square button--primary-light"
+          >
+            <svg
+              class="button__icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_ok_24"></use>
+            </svg>
+          </a>
+          <button class="button button--square button--transparent">
+            <svg
+              class="button__icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon_eye_24"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -397,7 +573,7 @@
                 <div class="hero__card-price">
                   Цена: <span class="hero__card-price-accent">от 5 000 ₽</span>
                 </div>
-                <button class="button button--primary-light hero__card-button">
+                <button class="button button--md button--primary-light hero__card-button">
                   Подробнее
                 </button>
               </div>
@@ -419,7 +595,7 @@
                 <div class="hero__card-price">
                   Цена: <span class="hero__card-price-accent">от 5 500 ₽</span>
                 </div>
-                <button class="button button--primary-light hero__card-button">
+                <button class="button button--md button--primary-light hero__card-button">
                   Подробнее
                 </button>
               </div>
@@ -441,16 +617,16 @@
                 <div class="hero__card-price">
                   Цена: <span class="hero__card-price-accent">от 5 900 ₽</span>
                 </div>
-                <button class="button button--primary-light hero__card-button">
+                <button class="button button--md button--primary-light hero__card-button">
                   Подробнее
                 </button>
               </div>
             </div>
             <div class="hero__cta">
-              <button class="button button--primary hero__cta-button">
+              <button class="button button--primary button--lg">
                 Подобрать капельницу
               </button>
-              <button class="button button--primary-light hero__cta-button">
+              <button class="button button--primary-light button--lg">
                 Бесплатная консультация
               </button>
             </div>
@@ -534,14 +710,16 @@
                 name="name"
                 placeholder="Ваше имя"
                 type="text"
+                required
               />
               <input
                 class="cta__input"
                 name="phone"
                 placeholder="Ваш номер телефона"
                 type="tel"
+                required
               />
-              <button class="button button--secondary cta__button">
+              <button class="button button--secondary button--lg">
                 Отправить заявку
               </button>
               <div class="cta__checkbox-wrapper">
@@ -767,12 +945,12 @@
               </p>
             </div>
             <div class="license__controls">
-              <button class="license__button">
+              <button class="button button--square license__button">
                 <svg width="16" height="16">
                   <use href="#icon_arrow_left_16"></use>
                 </svg>
               </button>
-              <button class="license__button">
+              <button class="button button--square license__button">
                 <svg width="16" height="16">
                   <use href="#icon_arrow_right_16"></use>
                 </svg>
@@ -782,7 +960,7 @@
           <div class="license__row">
             <div class="license__item">
               <img
-                class="img"
+                class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
               />
@@ -793,7 +971,7 @@
             </div>
             <div class="license__item">
               <img
-                class="img"
+                class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
               />
@@ -804,7 +982,18 @@
             </div>
             <div class="license__item">
               <img
-                class="img"
+                class="license__img"
+                src="assets/images/license_img.webp"
+                alt="Иллюстрация"
+              />
+              <div class="license__item-text">
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы
+              </div>
+            </div>
+            <div class="license__item">
+              <img
+                class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
               />
@@ -882,9 +1071,11 @@
     </section>
     <script>
       document
-        .querySelector('.header__button-burger')
-        .addEventListener('click', () => {
-          document.querySelector('.header__mobile').classList.toggle('isHide');
+        .querySelector("#header-button-hamburger")
+        .addEventListener("click", () => {
+          document
+            .querySelector(".header-mobile-menu")
+            .classList.toggle("isHide");
         });
     </script>
   </body>

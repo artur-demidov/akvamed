@@ -1,0 +1,8 @@
+.container {
+  width: min(var(--container-width), 100% - var(--container-inline-padding) * 2);
+  margin-inline: auto;
+}
+
+.heading {
+  font-family: var(--second-family), sans-serif;
+}

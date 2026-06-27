@@ -1,0 +1,27 @@
+:root {
+  --default-font: "Manrope";
+  --second-family: "LT Wave";
+  --container-width: 1720px;
+  --container-inline-padding: 30px;
+  --color-white: #fff;
+  --color-text: #3d5b4e;
+  --color-primary: #007844;
+  --color-primary-light: #78d864;
+  --color-primary-dark: #004728;
+  --color-bg-light: #e1f0e1;
+  --color-bg-gray: #f5f8f5;
+  --color-bg-light-green: #b7f9a1;
+  --color-header-light: #eef8ee;
+  --color-border: #dfede0;
+  --button-height-lg: 56px;
+  --button-height-md: 50px;
+  --button-padding: 28px;
+  --button-icon-size: 24px;
+  @media (width <= 1440px) {
+    --container-inline-padding: 10px;
+    --button-height-lg: 46px;
+    --button-height-md: 40px;
+    --button-padding: 20px;
+    --button-icon-size: 20px;
+  }
+}

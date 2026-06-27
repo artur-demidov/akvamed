@@ -1,0 +1,269 @@
+.text-block {
+  padding-block: 200px 100px;
+  background-color: var(--color-bg-light-green);
+  & .block + .block {
+    margin-top: 70px;
+  }
+  & .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 42px;
+    margin-top: 60px;
+  }
+  & .callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--color-bg-gray);
+    border-radius: 20px;
+    padding: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-primary-dark);
+    margin-top: 30px;
+    &::before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='26' fill='none' viewBox='0 0 21 26'%3E%3Cpath stroke='%2378d864' stroke-width='2' d='m2.98 10.5 3.64-4.97C8.97 2.3 10.15.7 11.24 1.04s1.1 2.32 1.1 6.26v.37c0 1.42 0 2.13.45 2.58l.02.02c.46.44 1.2.44 2.66.44 2.63 0 3.95 0 4.4.8l.02.04c.42.82-.35 1.87-1.87 3.95l-3.64 4.97c-2.35 3.22-3.52 4.83-4.62 4.49s-1.1-2.31-1.1-6.26v-.37c0-1.42 0-2.13-.45-2.58l-.02-.02c-.46-.44-1.2-.44-2.66-.44-2.63 0-3.95 0-4.4-.8l-.01-.04c-.42-.82.34-1.87 1.86-3.95Z'/%3E%3C/svg%3E");
+      width: 21px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+  }
+  & h2 {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 60px;
+    color: var(--color-primary-dark);
+  }
+  & h3 {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    color: var(--color-primary-dark);
+  }
+  & p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  & * + p {
+    margin-top: 30px;
+  }
+  & ul {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  & ul > li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-primary-light);
+      margin-top: 10px;
+    }
+  }
+  & ol {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+    counter-reset: text-block-counter;
+  }
+  & ol > li {
+    counter-increment: text-block-counter;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  & ol > li::before {
+    content: counter(text-block-counter, decimal-leading-zero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(1, 79, 45, 0.2);
+    border-radius: 12px;
+    width: 45px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-primary-light);
+  }
+  & blockquote {
+    display: grid;
+    align-items: start;
+    grid-template-columns: auto 1fr;
+    gap: 30px 20px;
+    background: var(--color-bg-gray);
+    border-radius: 20px;
+    padding: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-primary-dark);
+    margin-top: 30px;
+    &::before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='19' fill='none' viewBox='0 0 28 19'%3E%3Cpath fill='%2378d864' d='M11.8 13.92c0 3.1-2.1 5.08-6 5.08C2.02 19 0 17.08 0 14v-.21c0-1.3.2-2.47 1.26-4.4l6-9.39h5.17L9.5 7.4c-1.05 2.48 2.3 2.48 2.3 6.52m3.77.07v-.2c0-1.3.21-2.47 1.26-4.4l6-9.39H28l-2.93 7.4c-1.05 2.48 2.3 2.48 2.3 6.52 0 3.1-2.1 5.08-6 5.08-3.77 0-5.8-1.92-5.8-5'/%3E%3C/svg%3E");
+      width: 28px;
+      height: 19px;
+      flex-shrink: 0;
+    }
+    & .divider {
+      grid-column: 1 / -1;
+      background-color: var(--color-border);
+      height: 1px;
+    }
+    & .doctor {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 20px;
+    }
+    & .doctor__avatar {
+      width: 100px;
+      height: 100px;
+    }
+    & .doctor__info {
+      display: flex;
+      flex-direction: column;
+    }
+    & .doctor__name {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: var(--color-primary-dark);
+    }
+    & .doctor__position {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    & .doctor__experience {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--color-primary);
+      margin-top: auto;
+    }
+  }
+}
+
+@media (width <= 1440px) {
+  .text-block {
+    padding-block: 100px;
+    & .grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+      & > picture > img {
+        grid-row: 1;
+      }
+    }
+  }
+}
+
+@media (width <= 1100px) {
+  .text-block {
+    padding-block: 80px;
+    background-color: var(--color-white);
+    & .block + .block {
+      margin-top: 40px;
+    }
+    & .grid {
+      gap: 24px;
+      margin-top: 32px;
+    }
+    & .callout {
+      flex-direction: column;
+      border-radius: 16px;
+      padding: 24px 20px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 24px;
+    }
+    & h2 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    & h3 {
+      font-size: 22px;
+      line-height: 32px;
+    }
+    & p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    & * + p {
+      margin-top: 24px;
+    }
+    & ul {
+      margin-top: 16px;
+    }
+    & ul > li {
+      gap: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      &::before {
+        margin-top: 8px;
+      }
+    }
+    & ol {
+      margin-top: 16px;
+    }
+    & ol > li {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    & ol > li::before {
+      border-radius: 8px;
+      width: 40px;
+      height: 38px;
+      font-size: 14px;
+    }
+    & blockquote {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+      border-radius: 16px;
+      padding: 24px 20px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 24px;
+      & .doctor {
+        gap: 12px;
+      }
+      & .doctor__avatar {
+        width: 72px;
+        height: 72px;
+      }
+      & .doctor__info {
+        gap: 8px;
+      }
+      & .doctor__name {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      & .doctor__position {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      & .doctor__experience {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 0;
+      }
+    }
+  }
+}

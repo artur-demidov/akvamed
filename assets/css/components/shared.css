@@ -1,0 +1,129 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
+}
+
+.button__icon {
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+}
+
+.button--lg {
+  height: var(--button-height-lg);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  padding-inline: var(--button-padding);
+  border-radius: 12px;
+}
+
+.button--md {
+  height: var(--button-height-md);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-inline: var(--button-padding);
+  border-radius: 10px;
+}
+
+.button--square {
+  width: var(--button-height-lg);
+  height: var(--button-height-lg);
+  padding: 0;
+  border-radius: 12px;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  &:hover {
+    background-color: var(--color-primary-light);
+  }
+  &:active {
+    background: color-mix(in srgb, var(--color-primary-light) 80%, transparent);
+  }
+  &:disabled {
+    background: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+}
+
+.button--secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  &:hover {
+    background-color: var(--color-primary-light);
+  }
+  &:active {
+    background: color-mix(in srgb, var(--color-primary-light) 80%, transparent);
+  }
+  &:disabled {
+    background: color-mix(in srgb, var(--color-white) 50%, transparent);
+  }
+}
+
+.button--primary-light {
+  color: var(--color-primary);
+  background: var(--color-bg-light);
+  &:hover {
+    color: var(--color-white);
+    background: var(--color-primary);
+  }
+  &:active {
+    background: color-mix(in srgb, var(--color-primary) 80%, transparent);
+  }
+  &:disabled {
+    background: color-mix(in srgb, var(--color-bg-light) 50%, transparent);
+  }
+}
+
+.button--transparent {
+  height: var(--button-height-lg);
+  width: var(--button-height-lg);
+  color: var(--color-primary);
+  &:hover,
+  &:active {
+    color: var(--color-primary-light);
+  }
+  &:disabled {
+    color: color-mix(in srgb, var(--color-primary-light) 50%, transparent);
+  }
+}
+
+.button--nav {
+  height: var(--button-height-lg);
+  background-color: var(--color-header-light);
+  color: var(--color-primary);
+  &:not(.isActive):hover {
+    background-color: var(--color-bg-light);
+  }
+  &.isActive {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+  }
+}
+
+@media (width <= 1440px) {
+  .button {
+    gap: 8px;
+    border-radius: 8px;
+  }
+
+  .button--lg {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

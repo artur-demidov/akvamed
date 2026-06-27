@@ -1,0 +1,146 @@
+.license {
+  padding-block: 100px;
+  background-color: var(--color-bg-light-green);
+}
+
+.license__grid {
+  display: grid;
+  grid-template-columns: minmax(500px, 1fr) auto;
+  align-items: start;
+  gap: 50px;
+}
+
+.license__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.license__title {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 60px;
+  color: var(--color-primary-dark);
+  margin-bottom: 40px;
+}
+
+.license__description {
+  display: grid;
+  gap: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 90px;
+}
+
+.license__controls {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.license__button {
+  border-radius: 50%;
+  border: 1px solid rgba(1, 79, 45, 0.2);
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  &:active {
+    background: color-mix(in srgb, var(--color-primary) 80%, transparent);
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.license__row {
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+}
+
+.license__item {
+  width: fit-content;
+  position: relative;
+}
+
+.license__img {
+}
+
+.license__item-text {
+  position: absolute;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  background: rgba(245, 248, 245, 0.5);
+  inset: auto 12px 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.license__item:hover .license__item-text {
+  opacity: 1;
+}
+
+@media (width <= 1440px) {
+  .license {
+    padding-block: 80px;
+  }
+
+  .license__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .license__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .license__description {
+    margin-bottom: 0;
+  }
+
+  .license__controls {
+    display: none;
+  }
+
+  .license__row {
+    margin-inline: auto;
+  }
+}
+
+@media (width <= 1100px) {
+  .license {
+    padding-block: 40px;
+    background: var(--color-white);
+  }
+
+  .license__title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .license__description {
+    font-size: 14px;
+    line-height: 20px;
+    gap: 16px;
+  }
+
+  .license__row {
+    overflow-x: auto;
+  }
+
+  .license__item {
+    flex-shrink: 0;
+  }
+
+  .license__img {
+    width: 280px;
+  }
+}
