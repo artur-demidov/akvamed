@@ -1,6 +1,6 @@
 .cta {
   background:
-    url("/assets/images/cta_bg.svg") no-repeat bottom right / 35% 100%,
+    url("../../images/cta_bg.svg") no-repeat bottom right / 35% 100%,
     var(--color-primary);
 }
 

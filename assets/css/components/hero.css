@@ -1,7 +1,7 @@
 .hero {
   padding-block: 80px;
   background:
-    url("/assets/images/hero_bg.svg") no-repeat bottom right / 40% 100%,
+    url("../../images/hero_bg.svg") no-repeat bottom right / 40% 100%,
     var(--color-bg-gray);
 }
 
