@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 body {
   font-family: var(--default-font), sans-serif;
   color: var(--color-text);

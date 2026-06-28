@@ -1,6 +1,6 @@
 .cta {
   background:
-    url("assets/images/cta_bg.svg") no-repeat bottom right / 35% 100%,
+    url("/assets/images/cta_bg.svg") no-repeat bottom right / 35% 100%,
     var(--color-primary);
 }
 
@@ -47,6 +47,7 @@
   font-size: 16px;
   color: var(--color-white);
   padding-inline: 24px;
+  transition: border-color 0.2s ease-in-out;
   &:hover,
   &:focus {
     border-color: rgba(255, 255, 255, 0.5);

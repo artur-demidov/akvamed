@@ -5,9 +5,9 @@
   text-align: center;
   gap: 12px;
   transition:
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    color 0.15s ease-in-out;
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .button__icon {
@@ -59,9 +59,11 @@
   color: var(--color-primary);
   &:hover {
     background-color: var(--color-primary-light);
+    color: var(--color-white);
   }
   &:active {
     background: color-mix(in srgb, var(--color-primary-light) 80%, transparent);
+    color: var(--color-white);
   }
   &:disabled {
     background: color-mix(in srgb, var(--color-white) 50%, transparent);

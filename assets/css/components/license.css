@@ -5,7 +5,7 @@
 
 .license__grid {
   display: grid;
-  grid-template-columns: minmax(500px, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   gap: 50px;
 }
@@ -56,15 +56,23 @@
 .license__row {
   display: flex;
   gap: 12px;
-  min-width: 0;
+  width: calc(280px * 3 + 12px * 2);
+  max-width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .license__item {
-  width: fit-content;
+  width: 280px;
+  flex-shrink: 0;
   position: relative;
+  scroll-snap-align: start;
 }
 
 .license__img {
+  width: 100%;
+  display: block;
 }
 
 .license__item-text {
@@ -138,9 +146,5 @@
 
   .license__item {
     flex-shrink: 0;
-  }
-
-  .license__img {
-    width: 280px;
   }
 }

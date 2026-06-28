@@ -32,12 +32,15 @@
           </div>
           <button
             class="button button--lg button--primary header__button-mobile"
+            data-js-element="open-request-modal"
+            data-modal-title="Капельница на дому"
+            data-modal-subtitle="Оставьте заявку — врач приедет к вам с готовой капельницей"
           >
             Капельница на дому
           </button>
           <button
             class="button button--square button--primary-light header__button-mobile"
-            id="header-button-hamburger"
+            data-js-element="mobile-menu-toggle"
           >
             <svg class="button__icon" width="24" height="24">
               <use href="#icon_menu_24"></use>
@@ -214,7 +217,12 @@
                   href="https://t.me/ardmbbk"
                 >
                   <span>О клинике</span>
-                  <svg class="header__dropdown-chevron" width="20" height="20" aria-hidden="true">
+                  <svg
+                    class="header__dropdown-chevron"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                  >
                     <use href="#icon_chevron_down_20"></use>
                   </svg>
                 </a>
@@ -299,16 +307,30 @@
             </ul>
           </nav>
           <div class="header__cta">
-            <button class="button button--lg button--primary-light">
+            <button
+              class="button button--lg button--primary-light"
+              data-js-element="open-request-modal"
+              data-modal-title="Запись на приём"
+              data-modal-subtitle="Оставьте заявку, и мы подберём удобное для вас время"
+            >
               Записаться
             </button>
-            <button class="button button--lg button--primary">
+            <button
+              class="button button--lg button--primary"
+              data-js-element="open-request-modal"
+              data-modal-title="Капельница на дому"
+              data-modal-subtitle="Оставьте заявку — врач приедет к вам с готовой капельницей"
+            >
               Капельница на дому
             </button>
           </div>
         </div>
       </div>
-      <div class="header-mobile-menu isHide">
+      <div
+        class="header-mobile-menu"
+        data-js-element="mobile-menu"
+        data-open="false"
+      >
         <div class="header-mobile-menu__input-container">
           <input
             class="header-mobile-menu__input"
@@ -323,89 +345,97 @@
         </div>
         <button
           class="button button--lg button--primary header-mobile-menu__button"
+          data-js-element="open-request-modal"
+          data-modal-title="Бесплатная консультация"
+          data-modal-subtitle="Оставьте заявку, наш специалист перезвонит и бесплатно проконсультирует вас"
         >
           Бесплатная консультация
         </button>
         <div class="header-mobile-menu__nav">
-          <div class="header-mobile-menu__nav-dropdown">
+          <div
+            class="header-mobile-menu__nav-dropdown"
+            data-js-element="mobile-menu-dropdown"
+            data-open="false"
+          >
             <div
               class="button button--nav header-mobile-menu__nav-link"
+              data-js-element="mobile-menu-dropdown-toggle"
             >
               <a class="header-mobile-menu__nav-link-text">Услуги</a>
-              <button class="button button--transparent">
-                <svg width="20" height="20">
+              <button
+                class="button button--transparent header-mobile-menu__nav-toggle"
+              >
+                <svg
+                  class="header-mobile-menu__nav-chevron"
+                  width="20"
+                  height="20"
+                >
                   <use href="#icon_chevron_down_20"></use>
                 </svg>
               </button>
             </div>
-            <ul class="header-mobile-menu__nav-dropdown-menu">
-              <li>
-                <a
-                  class="header-mobile-menu__nav-dropdown-menu-item"
-                  href="https://t.me/ardmbbk"
-                >Медикаментозные капельницы (препараты)</a
-                >
-              </li>
-              <li>
-                <a
-                  class="header-mobile-menu__nav-dropdown-menu-item"
-                  href="https://t.me/ardmbbk"
-                >Инфузионная терапия</a
-                >
-              </li>
-              <li>
-                <a
-                  class="header-mobile-menu__nav-dropdown-menu-item"
-                  href="https://t.me/ardmbbk"
-                >Капельницы красоты</a
-                >
-              </li>
-              <li>
-                <a
-                  class="header-mobile-menu__nav-dropdown-menu-item"
-                  href="https://t.me/ardmbbk"
-                >Комплексные инфузионные программы</a
-                >
-              </li>
-              <li>
-                <a
-                  class="header-mobile-menu__nav-dropdown-menu-item"
-                  href="https://t.me/ardmbbk"
-                >Диагностика и анализы</a
-                >
-              </li>
-              <li>
-                <a
-                  class="header-mobile-menu__nav-dropdown-menu-item"
-                  href="https://t.me/ardmbbk"
-                >Другие услуги</a
-                >
-              </li>
-            </ul>
+            <div class="header-mobile-menu__nav-dropdown-collapse">
+              <div class="header-mobile-menu__nav-dropdown-collapse-inner">
+                <ul class="header-mobile-menu__nav-dropdown-menu">
+                  <li>
+                    <a
+                      class="header-mobile-menu__nav-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Медикаментозные капельницы (препараты)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-mobile-menu__nav-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Инфузионная терапия</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-mobile-menu__nav-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Капельницы красоты</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-mobile-menu__nav-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Комплексные инфузионные программы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-mobile-menu__nav-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Диагностика и анализы</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="header-mobile-menu__nav-dropdown-menu-item"
+                      href="https://t.me/ardmbbk"
+                      >Другие услуги</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <a
-            class="button button--nav header-mobile-menu__nav-link"
-            href=""
+          <a class="button button--nav header-mobile-menu__nav-link" href=""
             >О клинике</a
           >
-          <a
-            class="button button--nav header-mobile-menu__nav-link"
-            href=""
+          <a class="button button--nav header-mobile-menu__nav-link" href=""
             >Цены</a
           >
-          <a
-            class="button button--nav header-mobile-menu__nav-link"
-            href=""
+          <a class="button button--nav header-mobile-menu__nav-link" href=""
             >Врачи</a
           >
-          <a
-            class="button button--nav header-mobile-menu__nav-link"
-            href=""
+          <a class="button button--nav header-mobile-menu__nav-link" href=""
             >Контакты</a
           >
-          <a
-            class="button button--nav header-mobile-menu__nav-link"
-            href=""
+          <a class="button button--nav header-mobile-menu__nav-link" href=""
             >Статьи</a
           >
         </div>
@@ -486,12 +516,7 @@
             href="https://t.me/ardmbbk"
             class="button button--square button--primary-light"
           >
-            <svg
-              class="button__icon"
-              width="24"
-              height="24"
-              aria-hidden="true"
-            >
+            <svg class="button__icon" width="24" height="24" aria-hidden="true">
               <use href="#icon_vk_24"></use>
             </svg>
           </a>
@@ -499,12 +524,7 @@
             href="https://t.me/ardmbbk"
             class="button button--square button--primary-light"
           >
-            <svg
-              class="button__icon"
-              width="24"
-              height="24"
-              aria-hidden="true"
-            >
+            <svg class="button__icon" width="24" height="24" aria-hidden="true">
               <use href="#icon_tg_24"></use>
             </svg>
           </a>
@@ -512,22 +532,12 @@
             href="https://t.me/ardmbbk"
             class="button button--square button--primary-light"
           >
-            <svg
-              class="button__icon"
-              width="24"
-              height="24"
-              aria-hidden="true"
-            >
+            <svg class="button__icon" width="24" height="24" aria-hidden="true">
               <use href="#icon_ok_24"></use>
             </svg>
           </a>
           <button class="button button--square button--transparent">
-            <svg
-              class="button__icon"
-              width="24"
-              height="24"
-              aria-hidden="true"
-            >
+            <svg class="button__icon" width="24" height="24" aria-hidden="true">
               <use href="#icon_eye_24"></use>
             </svg>
           </button>
@@ -573,7 +583,9 @@
                 <div class="hero__card-price">
                   Цена: <span class="hero__card-price-accent">от 5 000 ₽</span>
                 </div>
-                <button class="button button--md button--primary-light hero__card-button">
+                <button
+                  class="button button--md button--primary-light hero__card-button"
+                >
                   Подробнее
                 </button>
               </div>
@@ -595,7 +607,9 @@
                 <div class="hero__card-price">
                   Цена: <span class="hero__card-price-accent">от 5 500 ₽</span>
                 </div>
-                <button class="button button--md button--primary-light hero__card-button">
+                <button
+                  class="button button--md button--primary-light hero__card-button"
+                >
                   Подробнее
                 </button>
               </div>
@@ -617,16 +631,28 @@
                 <div class="hero__card-price">
                   Цена: <span class="hero__card-price-accent">от 5 900 ₽</span>
                 </div>
-                <button class="button button--md button--primary-light hero__card-button">
+                <button
+                  class="button button--md button--primary-light hero__card-button"
+                >
                   Подробнее
                 </button>
               </div>
             </div>
             <div class="hero__cta">
-              <button class="button button--primary button--lg">
+              <button
+                class="button button--primary button--lg"
+                data-js-element="open-request-modal"
+                data-modal-title="Подобрать капельницу"
+                data-modal-subtitle="Оставьте заявку, и врач подберёт капельницу под ваши задачи"
+              >
                 Подобрать капельницу
               </button>
-              <button class="button button--primary-light button--lg">
+              <button
+                class="button button--primary-light button--lg"
+                data-js-element="open-request-modal"
+                data-modal-title="Бесплатная консультация"
+                data-modal-subtitle="Оставьте заявку, наш специалист перезвонит и бесплатно проконсультирует вас"
+              >
                 Бесплатная консультация
               </button>
             </div>
@@ -886,6 +912,8 @@
                     class="doctor__avatar"
                     src="assets/images/text_block_avatar.png"
                     alt="Аватар доктора"
+                    width="100"
+                    height="100"
                   />
                   <div class="doctor__info">
                     <div class="doctor__name">
@@ -945,19 +973,38 @@
               </p>
             </div>
             <div class="license__controls">
-              <button class="button button--square license__button">
+              <button
+                class="button button--square license__button"
+                data-js-element="license-scroll-button"
+                data-direction="prev"
+              >
                 <svg width="16" height="16">
                   <use href="#icon_arrow_left_16"></use>
                 </svg>
               </button>
-              <button class="button button--square license__button">
+              <button
+                class="button button--square license__button"
+                data-js-element="license-scroll-button"
+                data-direction="next"
+              >
                 <svg width="16" height="16">
                   <use href="#icon_arrow_right_16"></use>
                 </svg>
               </button>
             </div>
           </div>
-          <div class="license__row">
+          <div class="license__row" data-js-element="license-scroll">
+            <div class="license__item">
+              <img
+                class="license__img"
+                src="assets/images/license_img.webp"
+                alt="Иллюстрация"
+              />
+              <div class="license__item-text">
+                Приятно, граждане, наблюдать, как многие известные личности
+                своевременно верифицированы
+              </div>
+            </div>
             <div class="license__item">
               <img
                 class="license__img"
@@ -1015,10 +1062,32 @@
               Существуют ли в клинике пакетные предложения или скидки?
             </summary>
             <div class="faq__item-body">
-              Клиника работает на основании медицинской лицензии и всех
-              необходимых разрешений. Работаем с пациентами на основе заключения
-              договора о предоставлении медицинских услуг - прозрачно, безопасно
-              и с защитой вашего здоровья.
+              <div>
+                Клиника работает на основании медицинской лицензии и всех
+                необходимых разрешений. Работаем с пациентами на основе
+                заключения договора о предоставлении медицинских услуг -
+                прозрачно, безопасно и с защитой вашего здоровья.
+              </div>
+              <div class="faq__item-doctor">
+                <img
+                  class="faq__item-doctor-avatar"
+                  src="assets/images/text_block_avatar.png"
+                  alt="Аватар доктора"
+                  width="100"
+                  height="100"
+                />
+                <div class="faq__item-doctor-info">
+                  <div class="faq__item-doctor-name">
+                    Константинопольский Константин Константинович
+                  </div>
+                  <div class="faq__item-doctor-position">
+                    Главный врач клиники, психиатр-нарколог
+                  </div>
+                  <div class="faq__item-doctor__experience">
+                    Опыт работы: 13 лет
+                  </div>
+                </div>
+              </div>
             </div>
           </details>
           <details class="faq__item">
@@ -1027,10 +1096,32 @@
               необходимых разрешений?
             </summary>
             <div class="faq__item-body">
-              Клиника работает на основании медицинской лицензии и всех
-              необходимых разрешений. Работаем с пациентами на основе заключения
-              договора о предоставлении медицинских услуг - прозрачно, безопасно
-              и с защитой вашего здоровья.
+              <div>
+                Клиника работает на основании медицинской лицензии и всех
+                необходимых разрешений. Работаем с пациентами на основе
+                заключения договора о предоставлении медицинских услуг -
+                прозрачно, безопасно и с защитой вашего здоровья.
+              </div>
+              <div class="faq__item-doctor">
+                <img
+                  class="faq__item-doctor-avatar"
+                  src="assets/images/text_block_avatar.png"
+                  alt="Аватар доктора"
+                  width="100"
+                  height="100"
+                />
+                <div class="faq__item-doctor-info">
+                  <div class="faq__item-doctor-name">
+                    Константинопольский Константин Константинович
+                  </div>
+                  <div class="faq__item-doctor-position">
+                    Главный врач клиники, психиатр-нарколог
+                  </div>
+                  <div class="faq__item-doctor__experience">
+                    Опыт работы: 13 лет
+                  </div>
+                </div>
+              </div>
             </div>
           </details>
           <details class="faq__item">
@@ -1038,10 +1129,32 @@
               Существуют ли в клинике пакетные предложения или скидки?
             </summary>
             <div class="faq__item-body">
-              Клиника работает на основании медицинской лицензии и всех
-              необходимых разрешений. Работаем с пациентами на основе заключения
-              договора о предоставлении медицинских услуг - прозрачно, безопасно
-              и с защитой вашего здоровья.
+              <div>
+                Клиника работает на основании медицинской лицензии и всех
+                необходимых разрешений. Работаем с пациентами на основе
+                заключения договора о предоставлении медицинских услуг -
+                прозрачно, безопасно и с защитой вашего здоровья.
+              </div>
+              <div class="faq__item-doctor">
+                <img
+                  class="faq__item-doctor-avatar"
+                  src="assets/images/text_block_avatar.png"
+                  alt="Аватар доктора"
+                  width="100"
+                  height="100"
+                />
+                <div class="faq__item-doctor-info">
+                  <div class="faq__item-doctor-name">
+                    Константинопольский Константин Константинович
+                  </div>
+                  <div class="faq__item-doctor-position">
+                    Главный врач клиники, психиатр-нарколог
+                  </div>
+                  <div class="faq__item-doctor__experience">
+                    Опыт работы: 13 лет
+                  </div>
+                </div>
+              </div>
             </div>
           </details>
           <details class="faq__item">
@@ -1069,14 +1182,53 @@
         </div>
       </div>
     </section>
-    <script>
-      document
-        .querySelector("#header-button-hamburger")
-        .addEventListener("click", () => {
-          document
-            .querySelector(".header-mobile-menu")
-            .classList.toggle("isHide");
-        });
-    </script>
+    <dialog class="modal" data-js-element="request-modal">
+      <div class="modal__body">
+        <button
+          class="button modal__close"
+          data-js-element="request-modal-close"
+          aria-label="Закрыть"
+        >
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="#icon_close_24"></use>
+          </svg>
+        </button>
+        <h2
+          class="modal__title heading"
+          data-js-element="request-modal-title"
+        ></h2>
+        <p class="modal__subtitle" data-js-element="request-modal-subtitle"></p>
+        <form class="modal__form">
+          <input
+            class="cta__input"
+            name="name"
+            placeholder="Ваше имя"
+            type="text"
+            required
+          />
+          <input
+            class="cta__input"
+            name="phone"
+            placeholder="Ваш номер телефона"
+            type="tel"
+            required
+          />
+          <button class="button button--secondary button--lg">
+            Отправить заявку
+          </button>
+          <div class="cta__checkbox-wrapper">
+            <label class="cta__checkbox">
+              <input class="cta__checkbox-input" type="checkbox" checked />
+              <span class="cta__checkbox-text"
+                >Нажимая кнопку я соглашаюсь с
+                <a href="">политикой конфединциальности</a> и
+                <a href="">пользовательским соглашением</a></span
+              >
+            </label>
+          </div>
+        </form>
+      </div>
+    </dialog>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

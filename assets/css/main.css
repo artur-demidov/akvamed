@@ -9,5 +9,7 @@
 @import url(components/cta.css);
 @import url(components/text-block.css);
 @import url(components/license.css);
+@import url(components/faq.css);
+@import url(components/modal.css);
 
 @import url(utils.css);

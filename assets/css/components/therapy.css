@@ -1,7 +1,7 @@
 .therapy {
   position: relative;
   background:
-    url("assets/images/therapy_bg.svg") no-repeat center,
+    url("/assets/images/therapy_bg.svg") no-repeat center,
     var(--color-bg-light-green);
   padding-block: 200px;
 }
