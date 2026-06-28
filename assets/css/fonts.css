@@ -24,12 +24,12 @@
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url("/assets/fonts/LTWave-Medium.woff2") format("woff");
+  src: url("/assets/fonts/LTWave-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "LT Wave";
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url("/assets/fonts/LTWave-Bold.woff2") format("woff");
+  src: url("/assets/fonts/LTWave-Bold.woff2") format("woff2");
 }

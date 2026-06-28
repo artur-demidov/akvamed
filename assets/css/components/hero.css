@@ -239,6 +239,7 @@
     margin-inline: auto;
     margin-bottom: -50px;
     height: 350px;
+    width: auto;
     object-fit: cover;
     object-position: 0 10px;
   }

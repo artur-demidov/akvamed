@@ -10,11 +10,275 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <script type="module">
-      const response = await fetch("assets/images/sprite.svg");
-      const svgData = await response.text();
-      document.body.insertAdjacentHTML("afterbegin", svgData);
-    </script>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon_pin_24" fill="none" viewBox="0 0 24 24">
+        <path
+          stroke="currentColor"
+          stroke-width="1.5"
+          d="M4 9.6C4 4.8 7.8 1 12.5 1S21 4.8 21 9.6c0 4.6-2.7 10.1-7 12q-1.5.8-3 0c-4.3-1.9-7-7.4-7-12Z"
+        />
+        <ellipse
+          cx="12.5"
+          cy="9.4"
+          stroke="currentColor"
+          stroke-width="1.5"
+          rx="3.2"
+          ry="3.1"
+        />
+      </symbol>
+      <symbol id="icon_phone_24" fill="none" viewBox="0 0 24 24">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="1.5"
+          d="M13.1 2s2.5.2 5.6 3.3S22 11 22 11M13.3 6s1.1.2 2.8 1.9 2 2.7 2 2.7M8.7 5.7 9.4 7c.7 1.1.4 2.7-.6 3.7 0 0-1.2 1.2 1 3.5s3.5 1 3.5 1c1-1 2.6-1.3 3.7-.6l1.3.7c1.8 1 2 3.4.4 5q-1.3 1.5-3.3 1.7c-2.1 0-5.7-.5-9.3-4a12 12 0 0 1-4-9.4q.1-2 1.6-3.3c1.6-1.6 4-1.4 5 .4Z"
+        />
+      </symbol>
+      <symbol id="icon_refresh_time_24" fill="none" viewBox="0 0 24 24">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M12 7.56V12l2.78 2.78"
+        />
+        <path
+          fill="currentColor"
+          d="m4.9 4.9-.54-.54zM3.48 6.3h-.75c0 .42.33.75.74.75zm2.82.76a.75.75 0 1 0 0-1.5v1.5m-2.09-3.6a.75.75 0 1 0-1.5.02h.75zm-1.38 7.18a.75.75 0 1 0-1.49-.2l.74.1zm16.2-5.68.53-.53a10.75 10.75 0 0 0-15.2-.07l.52.53.53.53a9.25 9.25 0 0 1 13.09.07zM4.96 19.04l-.53.53a10.75 10.75 0 0 0 15.2.07l-.52-.53-.53-.53a9.25 9.25 0 0 1-13.09-.07zm14.15.07.53.53a10.75 10.75 0 0 0-.07-15.2l-.53.52-.53.53a9.25 9.25 0 0 1 .07 13.09zM4.89 4.89l-.53-.53-1.4 1.41.53.53.53.53 1.4-1.4zM3.5 6.3v.75l2.82.01v-1.5H3.5zm0 0h.75l-.02-2.83h-1.5l.02 2.83zm-1.4 4.24-.74-.1c-.44 3.22.59 6.63 3.08 9.13l.53-.53.53-.53a9.3 9.3 0 0 1-2.65-7.87z"
+        />
+      </symbol>
+      <svg id="icon_mail_24" fill="none" viewBox="0 0 24 24">
+        <path
+          stroke="currentColor"
+          stroke-width="1.5"
+          d="M1 12c0-4.1 0-6.2 1.3-7.5s3.4-1.3 7.5-1.3h4.4c4.1 0 6.2 0 7.5 1.3S23 7.9 23 12s0 6.2-1.3 7.5-3.4 1.3-7.5 1.3H9.8c-4.1 0-6.2 0-7.5-1.3S1 16.1 1 12Z"
+        />
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-width="1.5"
+          d="m5.4 7.6 2.4 2c2 1.7 3 2.5 4.2 2.5s2.2-.8 4.2-2.5l2.4-2"
+        />
+      </svg>
+      <symbol
+        id="icon_eye_24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+        />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol
+        id="icon_search_24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m21 21-4.34-4.34" />
+        <circle cx="11" cy="11" r="8" />
+      </symbol>
+      <symbol id="icon_vk_24" fill="none" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M13.2 19.3C5.5 19.3 1.2 13.9 1 5h3.8c.2 6.5 3 9.3 5.2 9.9V5h3.6v5.6c2.2-.2 4.6-2.8 5.4-5.6h3.6a11 11 0 0 1-5 7.1 11 11 0 0 1 5.8 7.2h-4a7 7 0 0 0-2.1-3.5q-1.6-1.4-3.7-1.6v5z"
+        />
+      </symbol>
+      <symbol id="icon_tg_24" fill="none" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="m21.6 3.6-3.1 16.2s-.4 1.1-1.6.6l-7.2-5.7 8.8-8.2q.6-.9-.4-.4L7 13.4l-4.4-1.5s-.6-.3-.7-.8.8-.8.8-.8l17.4-7.1s1.4-.7 1.4.4"
+        />
+      </symbol>
+      <symbol id="icon_ok_24" fill="none" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M18 15q1-.8.2-2-.5-1-1.8-.8l-.9.5a7 7 0 0 1-7.8-.1l-.4-.2q-1.4-.6-2.1.5-.8 1.3.2 2.2l.4.4v.1a8 8 0 0 0 4 1.6l-1 1-2.5 2.5q-.4.3-.5 1.1 0 1.1 1 1.7l.7.1q.6 0 1.1-.5l3-3h.1l1.9 2 .9 1q.5.4 1.1.4 1.1.1 1.7-1 .4-1-.3-1.8-1.1-1.2-2.4-2.3L13.4 17q1 0 2-.5 1.7-.6 2.7-1.6"
+        />
+        <path
+          fill="currentColor"
+          d="M11.6 12.9c3.3 0 5.9-2.5 5.9-5.8a6 6 0 0 0-5.8-5.9A6 6 0 0 0 6 7q0 2.4 1.7 4.1 1.6 1.8 4 1.8M10 5.4q.7-.7 1.6-.7Q14 5 14 7.1q-.2 2.1-2.4 2.3Q9.5 9.2 9.3 7q0-1 .7-1.7"
+        />
+        <path
+          fill="currentColor"
+          d="M18 15q1-.8.2-2-.5-1-1.8-.8l-.9.5a7 7 0 0 1-7.8-.1l-.4-.2q-1.4-.6-2.1.5-.8 1.3.2 2.2l.4.4v.1a8 8 0 0 0 4 1.6l-1 1-2.5 2.5q-.4.3-.5 1.1 0 1.1 1 1.7l.7.1q.6 0 1.1-.5l3-3h.1l1.9 2 .9 1q.5.4 1.1.4 1.1.1 1.7-1 .4-1-.3-1.8-1.1-1.2-2.4-2.3L13.4 17q1 0 2-.5 1.7-.6 2.7-1.6"
+        />
+      </symbol>
+      <svg
+        id="icon_chevron_down_20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+      <symbol
+        id="icon_menu_24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 5h16" />
+        <path d="M4 12h16" />
+        <path d="M4 19h16" />
+      </symbol>
+      <symbol
+        id="icon_close_24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </symbol>
+      <symbol
+        id="icon_check_24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M20 6 9 17l-5-5" />
+      </symbol>
+      <symbol id="illustration_drop_green" fill="none" viewBox="0 0 30 40">
+        <path
+          fill="#78d864"
+          d="M11.8 9.82c-1.34 2.35-3.4 4.16-5.4 5.95-2 1.8-4 3.68-5.2 6.12-4.79 9.76 5.69 18.86 14.77 18.06a15.8 15.8 0 0 0 13.08-9.97c3.37-9.22-2.78-20.87-9.5-26.88-.88-.78-6.9-5-7.24-2.1-.15 1.2.73 2.61.78 3.85a9.4 9.4 0 0 1-1.29 4.97"
+        />
+        <path
+          fill="#b7f9a1"
+          d="M2.35 22.68a10.6 10.6 0 0 0-.61 6.87c.12.48.27.96.54 1.37.26.42.63.77 1.09.93.8.28 1.73-.12 2.3-.76a6 6 0 0 0 1.15-2.32 34 34 0 0 0 1.48-7.85c.06-.99-.1-3.58-1.69-2.9-1.2.5-2.3 1.65-3.08 2.68q-.7.92-1.18 1.98M9.04 15.26c-.15.2-.3.42-.36.66a1 1 0 0 0 .08.75c.17.26.5.38.82.37.3-.02.6-.16.88-.3a4 4 0 0 0 1.63-1.36c.25-.41.37-.92.3-1.4-.12-.64-.34-.73-.9-.52-.96.34-1.82.97-2.45 1.8"
+        />
+        <path
+          fill="#69c662"
+          d="m24.34 8.53.1.26a34 34 0 0 1 1.86 7.22c.7 5.24-.16 10.85-3.18 15.14-3.02 4.28-8.4 6.97-13.46 5.93-2.16-.44-4.14-1.5-6.21-2.24l-.14-.05c3.15 3.45 8.08 5.56 12.66 5.16a15.8 15.8 0 0 0 13.08-9.97c2.53-6.91-.3-15.2-4.71-21.45"
+        />
+      </symbol>
+      <symbol id="illustration_drop_teal" fill="none" viewBox="0 0 30 40">
+        <path
+          fill="#64d8a1"
+          d="M11.8 9.82c-1.34 2.35-3.4 4.16-5.4 5.95-2 1.8-4 3.68-5.2 6.12-4.79 9.76 5.69 18.86 14.77 18.06a15.8 15.8 0 0 0 13.08-9.97c3.37-9.22-2.78-20.87-9.5-26.88-.88-.78-6.9-5-7.24-2.1-.15 1.2.73 2.61.78 3.85a9.4 9.4 0 0 1-1.29 4.97"
+        />
+        <path
+          fill="#a1f9dc"
+          d="M2.35 22.68a10.6 10.6 0 0 0-.61 6.87c.12.48.27.96.54 1.37.26.42.63.77 1.09.93.8.28 1.73-.12 2.3-.76a6 6 0 0 0 1.15-2.32 34 34 0 0 0 1.48-7.85c.06-.99-.1-3.58-1.69-2.9-1.2.5-2.3 1.65-3.08 2.68q-.7.92-1.18 1.98M9.04 15.26c-.15.2-.3.42-.36.66a1 1 0 0 0 .08.75c.17.26.5.38.82.37.3-.02.6-.16.88-.3a4 4 0 0 0 1.63-1.36c.25-.41.37-.92.3-1.4-.12-.64-.34-.73-.9-.52-.96.34-1.82.97-2.45 1.8"
+        />
+        <path
+          fill="#57c69e"
+          d="m24.34 8.53.1.26a34 34 0 0 1 1.86 7.22c.7 5.24-.16 10.85-3.18 15.14-3.02 4.28-8.4 6.97-13.46 5.93-2.16-.44-4.14-1.5-6.21-2.24l-.14-.05c3.15 3.45 8.08 5.56 12.66 5.16a15.8 15.8 0 0 0 13.08-9.97c2.53-6.91-.3-15.2-4.71-21.45"
+        />
+      </symbol>
+      <symbol id="illustration_drop_blue" fill="none" viewBox="0 0 30 40">
+        <path
+          fill="#64b1d8"
+          d="M11.8 9.82c-1.34 2.35-3.4 4.16-5.4 5.95-2 1.8-4 3.68-5.2 6.12-4.79 9.76 5.69 18.86 14.77 18.06a15.8 15.8 0 0 0 13.08-9.97c3.37-9.22-2.78-20.87-9.5-26.88-.88-.78-6.9-5-7.24-2.1-.15 1.2.73 2.61.78 3.85a9.4 9.4 0 0 1-1.29 4.97"
+        />
+        <path
+          fill="#a1e7f9"
+          d="M2.35 22.68a10.6 10.6 0 0 0-.61 6.87c.12.48.27.96.54 1.37.26.42.63.77 1.09.93.8.28 1.73-.12 2.3-.76a6 6 0 0 0 1.15-2.32 34 34 0 0 0 1.48-7.85c.06-.99-.1-3.58-1.69-2.9-1.2.5-2.3 1.65-3.08 2.68q-.7.92-1.18 1.98M9.04 15.26c-.15.2-.3.42-.36.66a1 1 0 0 0 .08.75c.17.26.5.38.82.37.3-.02.6-.16.88-.3a4 4 0 0 0 1.63-1.36c.25-.41.37-.92.3-1.4-.12-.64-.34-.73-.9-.52-.96.34-1.82.97-2.45 1.8"
+        />
+        <path
+          fill="#57a2d5"
+          d="m24.34 8.53.1.26a34 34 0 0 1 1.86 7.22c.7 5.24-.16 10.85-3.18 15.14-3.02 4.28-8.4 6.97-13.46 5.93-2.16-.44-4.14-1.5-6.21-2.24l-.14-.05c3.15 3.45 8.08 5.56 12.66 5.16a15.8 15.8 0 0 0 13.08-9.97c2.53-6.91-.3-15.2-4.71-21.45"
+        />
+      </symbol>
+      <symbol id="therapy_lightning" fill="none" viewBox="0 0 21 26">
+        <path
+          stroke="#78d864"
+          stroke-width="2"
+          d="m2.98 10.5 3.64-4.97C8.97 2.3 10.15.7 11.24 1.04s1.1 2.32 1.1 6.26v.37c0 1.42 0 2.13.45 2.58l.02.02c.46.44 1.2.44 2.66.44 2.63 0 3.95 0 4.4.8l.02.04c.42.82-.35 1.87-1.87 3.95l-3.64 4.97c-2.35 3.22-3.52 4.83-4.62 4.49s-1.1-2.31-1.1-6.26v-.37c0-1.42 0-2.13-.45-2.58l-.02-.02c-.46-.44-1.2-.44-2.66-.44-2.63 0-3.95 0-4.4-.8l-.01-.04c-.42-.82.34-1.87 1.86-3.95Z"
+        />
+      </symbol>
+      <symbol id="therapy_timer" fill="none" viewBox="0 0 26 26">
+        <path
+          stroke="#78d864"
+          stroke-linecap="round"
+          stroke-width="2"
+          d="M1 13A12 12 0 1 0 13 1"
+        />
+        <path
+          stroke="#78d864"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 9.4v4.8h4.8"
+        />
+        <circle
+          cx="13"
+          cy="13"
+          r="12"
+          stroke="#78d864"
+          stroke-dasharray="0.5 3.5"
+          stroke-linecap="round"
+          stroke-width="2"
+        />
+      </symbol>
+      <symbol id="therapy_drop" fill="none" viewBox="0 0 21 26">
+        <path
+          stroke="#78d864"
+          stroke-width="2"
+          d="M20 14.3c0 5.9-4.3 10.7-9.5 10.7S1 20.2 1 14.3c0-3.7 3.7-8.7 6.5-11.9a4 4 0 0 1 6 0c2.8 3.2 6.5 8.2 6.5 11.9Z"
+        />
+      </symbol>
+      <symbol id="therapy_yoga" fill="none" viewBox="0 0 24 27">
+        <path
+          stroke="#78d864"
+          stroke-width="2"
+          d="M15.06 4.13A3.1 3.1 0 0 1 12 7.25a3.1 3.1 0 0 1-3.06-3.12A3.1 3.1 0 0 1 12 1a3.1 3.1 0 0 1 3.06 3.13Z"
+        />
+        <path
+          stroke="#78d864"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 19.75 3.16-1.64c.31-.15.5-.48.5-.84a7.5 7.5 0 0 1 6.13-7.42 7 7 0 0 1 2.42 0 7.5 7.5 0 0 1 6.12 7.42c0 .36.2.69.5.84L23 19.75"
+        />
+        <path
+          stroke="#78d864"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m8.94 18.5-1.27 1.74-.08.1a2.4 2.4 0 0 1-1.38.9l-1.82.46a2.9 2.9 0 0 0-2.17 2.84c0 .8.64 1.46 1.43 1.46h1.9c.74 0 1.1 0 1.46-.04q1.25-.16 2.36-.8c.3-.19.6-.42 1.19-.86l.22-.18m0 0 2.44-1.87m-2.44 1.88 3.1 1.19c.75.28 1.12.42 1.5.52q.3.06.6.1c.4.06.8.06 1.6.06h2.77c.79 0 1.43-.66 1.43-1.46 0-1.35-.9-2.52-2.17-2.84l-1.82-.47-.12-.03q-.77-.22-1.26-.86l-.08-.1-1.27-1.74"
+        />
+      </symbol>
+      <symbol id="icon_arrow_left_16" fill="none" viewBox="0 0 16 16">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M15 8H1m5.25 5.5L1 8l5.25-5.5"
+        />
+      </symbol>
+      <symbol id="icon_arrow_right_16" fill="none" viewBox="0 0 16 16">
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M1 8h14m-5.25 5.5L15 8 9.75 2.5"
+        />
+      </symbol>
+    </svg>
     <header class="header">
       <div class="container">
         <div class="header__head">
@@ -43,7 +307,10 @@
             data-js-element="mobile-menu-toggle"
           >
             <svg class="button__icon" width="24" height="24">
-              <use href="#icon_menu_24"></use>
+              <use
+                href="#icon_menu_24"
+                data-js-element="mobile-menu-icon"
+              ></use>
             </svg>
           </button>
           <div class="header__info">
@@ -664,6 +931,9 @@
               class="hero__photo"
               src="assets/images/hero_photo.png"
               alt="Фотография врача"
+              width="595"
+              height="853"
+              fetchpriority="high"
             />
           </picture>
         </div>
@@ -714,6 +984,9 @@
               class="therapy__img"
               src="assets/images/therapy_img.png"
               alt="Иллюстрация капельницы"
+              width="531"
+              height="678"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -732,14 +1005,14 @@
             </p>
             <form class="cta__form">
               <input
-                class="cta__input"
+                class="input"
                 name="name"
                 placeholder="Ваше имя"
                 type="text"
                 required
               />
               <input
-                class="cta__input"
+                class="input"
                 name="phone"
                 placeholder="Ваш номер телефона"
                 type="tel"
@@ -748,12 +1021,17 @@
               <button class="button button--secondary button--lg">
                 Отправить заявку
               </button>
-              <div class="cta__checkbox-wrapper">
-                <label class="cta__checkbox">
-                  <input class="cta__checkbox-input" type="checkbox" checked />
-                  <span class="cta__checkbox-text"
+              <div class="checkbox-wrapper">
+                <label class="checkbox">
+                  <input
+                    class="checkbox__input"
+                    type="checkbox"
+                    checked
+                    required
+                  />
+                  <span class="checkbox__text"
                     >Нажимая кнопку я соглашаюсь с
-                    <a href="">политикой конфединциальности</a> и
+                    <a href="">политикой конфиденциальности</a> и
                     <a href="">пользовательским соглашением</a></span
                   >
                 </label>
@@ -767,6 +1045,9 @@
               class="cta__photo"
               src="assets/images/cta_photo.png"
               alt="Фотография врача"
+              width="622"
+              height="560"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -868,6 +1149,9 @@
                 class="img"
                 src="assets/images/text_block_img_1.png"
                 alt="Иллюстрация"
+                width="418"
+                height="418"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -914,6 +1198,7 @@
                     alt="Аватар доктора"
                     width="100"
                     height="100"
+                    loading="lazy"
                   />
                   <div class="doctor__info">
                     <div class="doctor__name">
@@ -948,6 +1233,9 @@
                 class="img"
                 src="assets/images/text_block_img_2.png"
                 alt="Иллюстрация"
+                width="418"
+                height="418"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -994,55 +1282,70 @@
             </div>
           </div>
           <div class="license__row" data-js-element="license-scroll">
-            <div class="license__item">
+            <div class="license__item" data-js-element="license-scroll-item">
               <img
                 class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
+                width="331"
+                height="479"
+                loading="lazy"
               />
               <div class="license__item-text">
                 Приятно, граждане, наблюдать, как многие известные личности
                 своевременно верифицированы
               </div>
             </div>
-            <div class="license__item">
+            <div class="license__item" data-js-element="license-scroll-item">
               <img
                 class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
+                width="331"
+                height="479"
+                loading="lazy"
               />
               <div class="license__item-text">
                 Приятно, граждане, наблюдать, как многие известные личности
                 своевременно верифицированы
               </div>
             </div>
-            <div class="license__item">
+            <div class="license__item" data-js-element="license-scroll-item">
               <img
                 class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
+                width="331"
+                height="479"
+                loading="lazy"
               />
               <div class="license__item-text">
                 Приятно, граждане, наблюдать, как многие известные личности
                 своевременно верифицированы
               </div>
             </div>
-            <div class="license__item">
+            <div class="license__item" data-js-element="license-scroll-item">
               <img
                 class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
+                width="331"
+                height="479"
+                loading="lazy"
               />
               <div class="license__item-text">
                 Приятно, граждане, наблюдать, как многие известные личности
                 своевременно верифицированы
               </div>
             </div>
-            <div class="license__item">
+            <div class="license__item" data-js-element="license-scroll-item">
               <img
                 class="license__img"
                 src="assets/images/license_img.webp"
                 alt="Иллюстрация"
+                width="331"
+                height="479"
+                loading="lazy"
               />
               <div class="license__item-text">
                 Приятно, граждане, наблюдать, как многие известные личности
@@ -1075,6 +1378,7 @@
                   alt="Аватар доктора"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <div class="faq__item-doctor-info">
                   <div class="faq__item-doctor-name">
@@ -1109,6 +1413,7 @@
                   alt="Аватар доктора"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <div class="faq__item-doctor-info">
                   <div class="faq__item-doctor-name">
@@ -1142,6 +1447,7 @@
                   alt="Аватар доктора"
                   width="100"
                   height="100"
+                  loading="lazy"
                 />
                 <div class="faq__item-doctor-info">
                   <div class="faq__item-doctor-name">
@@ -1198,30 +1504,33 @@
           data-js-element="request-modal-title"
         ></h2>
         <p class="modal__subtitle" data-js-element="request-modal-subtitle"></p>
-        <form class="modal__form">
+        <form class="modal__form" data-js-element="request-form">
           <input
-            class="cta__input"
+            class="input"
             name="name"
             placeholder="Ваше имя"
             type="text"
             required
           />
           <input
-            class="cta__input"
+            class="input"
             name="phone"
             placeholder="Ваш номер телефона"
             type="tel"
             required
           />
-          <button class="button button--secondary button--lg">
+          <button
+            class="button button--secondary button--lg"
+            data-js-element="request-form-submit"
+          >
             Отправить заявку
           </button>
-          <div class="cta__checkbox-wrapper">
-            <label class="cta__checkbox">
-              <input class="cta__checkbox-input" type="checkbox" checked />
-              <span class="cta__checkbox-text"
+          <div class="checkbox-wrapper">
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox" checked required />
+              <span class="checkbox__text"
                 >Нажимая кнопку я соглашаюсь с
-                <a href="">политикой конфединциальности</a> и
+                <a href="">политикой конфиденциальности</a> и
                 <a href="">пользовательским соглашением</a></span
               >
             </label>

@@ -15,11 +15,10 @@ function toggleOpen(element) {
 function addToggleMobileMenu() {
   const toggleButton = getElement("mobile-menu-toggle");
   const mobileMenu = getElement("mobile-menu");
+  const icon = getElement("mobile-menu-icon", toggleButton);
   toggleButton.addEventListener("click", () => {
     const isOpen = toggleOpen(mobileMenu);
-    toggleButton
-      .querySelector("use")
-      .setAttribute("href", `#icon_${isOpen ? "close" : "menu"}_24`);
+    icon.setAttribute("href", `#icon_${isOpen ? "close" : "menu"}_24`);
   });
 }
 
@@ -38,7 +37,7 @@ function addLicenseScroll() {
   const buttons = getElements("license-scroll-button");
 
   function getStep() {
-    const item = scroll.firstElementChild;
+    const item = getElement("license-scroll-item", scroll);
     if (!item) return scroll.clientWidth;
     const gap = parseFloat(getComputedStyle(scroll).columnGap) || 0;
     return item.getBoundingClientRect().width + gap;
@@ -64,10 +63,14 @@ function addLicenseScroll() {
     });
   });
 
-  scroll.addEventListener("scroll", updateButtons);
+  scroll.addEventListener("scrollend", updateButtons);
   window.addEventListener("resize", updateButtons);
   window.addEventListener("load", updateButtons);
   updateButtons();
+}
+
+function resultIcon(success) {
+  return `<svg width="24" height="24"><use href="${success ? "#icon_check_24" : "#icon_close_24"}"></use></svg>`;
 }
 
 function addRequestModal() {
@@ -76,12 +79,55 @@ function addRequestModal() {
 
   const title = getElement("request-modal-title", modal);
   const subtitle = getElement("request-modal-subtitle", modal);
-  const closeButton = getElement("request-modal-close", modal);
+  const form = getElement("request-form", modal);
 
   const DEFAULT_TITLE =
     "Не знаете какая капельница или процедура вам подойдет?";
   const DEFAULT_SUBTITLE =
     "Оставьте заявку, наш специалист перезвонит вам и бесплатно проконсультирует вас";
+
+  const setIntroHidden = (hidden) => {
+    title.hidden = hidden;
+    subtitle.hidden = hidden;
+  };
+
+  const clearResult = () =>
+    getElements("request-result", modal).forEach((el) => el.remove());
+
+  function showForm() {
+    clearResult();
+    setIntroHidden(false);
+    form.hidden = false;
+  }
+
+  function showSuccess() {
+    setIntroHidden(true);
+    form.hidden = true;
+    const result = document.createElement("div");
+    result.className = "form-result";
+    result.dataset.jsElement = "request-result";
+    result.innerHTML = `
+      <div class="form-result__icon">${resultIcon(true)}</div>
+      <h3 class="form-result__title heading">Заявка успешно отправлена!</h3>
+      <button type="button" class="button button--secondary button--lg form-result__button" data-js-element="request-result-button">Хорошо</button>`;
+    getElement("request-result-button", result).onclick = () => modal.close();
+    form.after(result);
+  }
+
+  function showError(message) {
+    setIntroHidden(true);
+    form.hidden = true;
+    const error = document.createElement("div");
+    error.className = "form-error";
+    error.dataset.jsElement = "request-result";
+    error.innerHTML = `
+      <div class="form-result__icon">${resultIcon(false)}</div>
+      <h3 class="modal__title heading" data-js-element="request-result-title"></h3>
+      <button type="button" class="button button--secondary button--lg form-result__button" data-js-element="request-result-button">Повторить попытку</button>`;
+    getElement("request-result-title", error).textContent = message;
+    getElement("request-result-button", error).onclick = showForm;
+    form.after(error);
+  }
 
   getElements("open-request-modal").forEach((button) => {
     button.addEventListener("click", () => {
@@ -93,10 +139,45 @@ function addRequestModal() {
     });
   });
 
-  closeButton.addEventListener("click", () => modal.close());
+  getElement("request-modal-close", modal).addEventListener("click", () =>
+    modal.close(),
+  );
 
   modal.addEventListener("click", (event) => {
     if (event.target === modal) modal.close();
+  });
+
+  modal.addEventListener("close", () => {
+    showForm();
+    form.reset();
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const submit = getElement("request-form-submit", form);
+    submit.disabled = true;
+    clearResult();
+
+    try {
+      // const response = await fetch("/request", {
+      //   method: "POST",
+      //   body: new FormData(form),
+      // });
+      // const data = await response.json();
+
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      const data = { ok: Math.random() < 0.5 };
+
+      if (data.ok) {
+        showSuccess();
+      } else {
+        showError(data.error || "Произошла какая-то ошибка");
+      }
+    } catch {
+      showError("Произошла какая-то ошибка");
+    } finally {
+      submit.disabled = false;
+    }
   });
 }
 
